@@ -1,0 +1,16 @@
+{
+  "id": "VqlLVplbh3vWvOjX",
+  "name": "workAutomations",
+  "icon": {
+    "type": "icon",
+    "value": "zap"
+  },
+  "description": "",
+  "type": "team",
+  "owner": {
+    "type": "team",
+    "teamId": "VqlLVplbh3vWvOjX",
+    "teamName": "workAutomations"
+  },
+  "variableStubs": []
+}

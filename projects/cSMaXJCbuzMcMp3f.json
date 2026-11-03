@@ -1,0 +1,16 @@
+{
+  "id": "cSMaXJCbuzMcMp3f",
+  "name": "OB Walthrough",
+  "icon": {
+    "type": "icon",
+    "value": "layers"
+  },
+  "description": "",
+  "type": "team",
+  "owner": {
+    "type": "team",
+    "teamId": "cSMaXJCbuzMcMp3f",
+    "teamName": "OB Walthrough"
+  },
+  "variableStubs": []
+}

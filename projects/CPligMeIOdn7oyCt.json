@@ -1,0 +1,16 @@
+{
+  "id": "CPligMeIOdn7oyCt",
+  "name": "Marketing",
+  "icon": {
+    "type": "icon",
+    "value": "layers"
+  },
+  "description": "",
+  "type": "team",
+  "owner": {
+    "type": "team",
+    "teamId": "CPligMeIOdn7oyCt",
+    "teamName": "Marketing"
+  },
+  "variableStubs": []
+}

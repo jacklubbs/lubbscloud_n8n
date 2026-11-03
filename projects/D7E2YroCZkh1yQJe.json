@@ -1,0 +1,16 @@
+{
+  "id": "D7E2YroCZkh1yQJe",
+  "name": "n8nEssentailsAcademy",
+  "icon": {
+    "type": "emoji",
+    "value": "🧾"
+  },
+  "description": "",
+  "type": "team",
+  "owner": {
+    "type": "team",
+    "teamId": "D7E2YroCZkh1yQJe",
+    "teamName": "n8nEssentailsAcademy"
+  },
+  "variableStubs": []
+}

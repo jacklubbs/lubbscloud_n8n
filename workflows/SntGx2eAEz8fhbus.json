@@ -1,0 +1,761 @@
+{
+  "id": "SntGx2eAEz8fhbus",
+  "name": "Onboarding",
+  "description": null,
+  "nodes": [
+    {
+      "parameters": {
+        "content": "## M365 Employee Onboarding Orchestrator\n\n### Overview\nThis agent is invoked by HR when a new employee\nis added in the HRIS system. It orchestrates the full onboarding stack across Notion, Google Drive and Slack.\n\n### Production Failsafes Added:\n- **True Parallel Execution:** All 4 major tasks run independently from the parser.\n- **Continue On Fail:** ALL action and AI nodes output error items to downstream Wait nodes.\n- **Dynamic Validation:** The final summary pulls live IDs, showing ❌ for failed branches.\n- **Global Error Trigger:** Catches unhandled workflow crashes.\n",
+        "height": 466,
+        "width": 620
+      },
+      "id": "437cb166-10b3-4242-abb1-b6027507a880",
+      "name": "README",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -912,
+        176
+      ]
+    },
+    {
+      "parameters": {},
+      "id": "08511e07-b220-482b-ae8f-09caff4abb74",
+      "name": "Error Trigger",
+      "type": "n8n-nodes-base.errorTrigger",
+      "typeVersion": 1,
+      "position": [
+        -176,
+        960
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "const errorData = $input.first().json;\n\nconst summary = [\n  '🚨 Onboarding Workflow Critical Failure',\n  '',\n  '*Failed Node:* ' + errorData.execution.lastNodeExecuted,\n  '*Error Message:* ' + errorData.execution.error.message,\n  '*Workflow ID:* ' + errorData.workflow.id\n].join('\\n');\n\nreturn [{ json: { summary } }];"
+      },
+      "id": "3427f132-72c1-4424-a83d-fb45a61a2dba",
+      "name": "Build Error Alert Card",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        48,
+        960
+      ]
+    },
+    {
+      "parameters": {
+        "select": "channel",
+        "channelId": {
+          "__rl": true,
+          "mode": "list",
+          "value": "",
+          "cachedResultName": "Select HR/IT alerts channel"
+        },
+        "text": "={{ $json.summary }}",
+        "otherOptions": {}
+      },
+      "id": "5b375613-ba93-4ffd-921e-b7450d765088",
+      "name": "Slack: Post Error Alert",
+      "type": "n8n-nodes-base.slack",
+      "typeVersion": 2.7,
+      "position": [
+        304,
+        960
+      ],
+      "webhookId": "81029dc9-22a3-4015-ad3b-4fd0a9058ef6"
+    },
+    {
+      "parameters": {
+        "content": "### Global Error Failsafe\nCatches severe, unhandled workflow crashes (e.g., node timeout, Anthropic API drop, out-of-memory) and alerts the IT/HR channel immediately.",
+        "height": 268,
+        "width": 736,
+        "color": 7
+      },
+      "id": "7a70841e-862a-4388-b833-17f77de115f7",
+      "name": "Sticky Note",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -240,
+        848
+      ]
+    },
+    {
+      "parameters": {
+        "content": "### Ingestion & Payload Parsing\nListens for the trigger and extracts the employee data using regex. Sets up core config IDs for downstream nodes",
+        "height": 300,
+        "width": 868,
+        "color": 7
+      },
+      "id": "acadfbdb-f82d-4c33-b8aa-b9c26725f78a",
+      "name": "Sticky Note1",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -128,
+        208
+      ]
+    },
+    {
+      "parameters": {
+        "content": "### Provisioning\nCreates the employee's Notion entry and provisions their personal Google Drive space. Handles the array mapping to generate the 5 required templated sub-folders.",
+        "height": 508,
+        "width": 1088,
+        "color": 7
+      },
+      "id": "4481cc10-99f1-437f-b36d-162adaeb7ac9",
+      "name": "Sticky Note2",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        928,
+        -32
+      ]
+    },
+    {
+      "parameters": {
+        "content": "### Communications Pipeline\nProvisions the private cohort channel in Slack and leverages Claude to write a highly contextual, personalized welcome email sent via Outlook.",
+        "height": 588,
+        "width": 1088,
+        "color": 7
+      },
+      "id": "cda2117e-1b82-4a28-94aa-6954fe5cd4b1",
+      "name": "Sticky Note3",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        928,
+        528
+      ]
+    },
+    {
+      "parameters": {
+        "content": "### Parallel Sync & Summary\nWaits for all parallel branches to resolve (whether they succeed or pass an error item via 'Continue on Fail'). Dynamically validates the outputs and posts a final summary to HR in Slack.",
+        "height": 508,
+        "width": 1088,
+        "color": 7
+      },
+      "id": "1a23119c-684e-4b77-af6d-331bcfffb97f",
+      "name": "Sticky Note4",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        2064,
+        -32
+      ]
+    },
+    {
+      "parameters": {
+        "options": {
+          "systemMessage": "You are an employee onboarding assistant receiving new employee data and orchestrating process automation, before you proceed you will need to ensure you have: \n\n\nFull Name\nTeam Member\ndepartment\nstartDate\nmanager\nlocation\nemail\nfolderName\nNOTION_DATABASE_ID\nGDRIVE_PARENT_FOLDER_PATH\nHR_MAILBOX\n"
+        }
+      },
+      "id": "b0d196a7-123d-4d73-b1e0-e4c91cbb6f03",
+      "name": "AI Agent",
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 3.1,
+      "position": [
+        240,
+        304
+      ]
+    },
+    {
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "mode": "list",
+          "value": "claude-sonnet-5",
+          "cachedResultName": "Claude Sonnet 5"
+        },
+        "options": {}
+      },
+      "id": "579732f5-0bd1-4a20-a689-2854c8373c90",
+      "name": "Anthropic Chat Model",
+      "type": "@n8n/n8n-nodes-langchain.lmChatAnthropic",
+      "typeVersion": 1.6,
+      "position": [
+        240,
+        528
+      ],
+      "credentials": {
+        "anthropicApi": {
+          "id": "uCPIbLTZkA9IfZ4J",
+          "name": "Anthropic account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "const payload = $input.first().json;\nconst rawText = payload.text || payload.body?.content || payload.message || '';\n\nconst extract = (label) => {\n  const regex = new RegExp(`${label}[:\\\\s]+([^|\\\\n]+)`, 'i');\n  const match = rawText.match(regex);\n  return match ? match[1].trim() : '';\n};\n\nconst newHire = {\n  fullName:    extract('Name') || extract('Employee') || 'New Employee',\n  role:        extract('Role') || extract('Title') || extract('Position') || 'Team Member',\n  department:  extract('Department') || extract('Team') || 'General',\n  startDate:   extract('StartDate') || extract('Start Date') || extract('Start') ||\n               new Date(Date.now() + 7 * 24 * 60 * 60 * 1000).toISOString().split('T')[0],\n  managerEmail: extract('Manager') || extract('ReportsTo') || '',\n  location:    extract('Location') || extract('Office') || 'Remote',\n  email:       extract('Email') || extract('WorkEmail') || ''\n};\n\nconst folderName = `${newHire.fullName} - ${newHire.role} - ${newHire.startDate}`\n  .replace(/[<>:\"/\\\\|?*]/g, '-').trim();\n\nconst NOTION_DATABASE_ID           = 'REPLACE_WITH_YOUR_ONBOARDING_DATABASE_ID';\nconst GDRIVE_PARENT_FOLDER_PATH    = '/HR/NewHires'; \nconst OUTLOOK_HR_MAILBOX           = 'user@example.com';\n\nreturn [{\n  json: {\n    ...newHire,\n    folderName,\n    NOTION_DATABASE_ID,\n    GDRIVE_PARENT_FOLDER_PATH,\n    OUTLOOK_HR_MAILBOX,\n    rawText,\n    triggeredAt: new Date().toISOString()\n  }\n}];"
+      },
+      "id": "261e4fc5-d3fe-4e2c-ac43-9040e3cabfc7",
+      "name": "Parse New Hire + Config",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        688,
+        320
+      ]
+    },
+    {
+      "parameters": {
+        "authentication": "oAuth2",
+        "resource": "databasePage",
+        "dataSourceId": {
+          "__rl": true,
+          "value": "3d85b6e0-c94f-8050-ba0a-000b088300d6",
+          "mode": "list",
+          "cachedResultName": "Employee Data",
+          "cachedResultUrl": "https://app.notion.com/p/3d85b6e0c94f80e5ad1fd1188f682729"
+        },
+        "title": "Jack Lubbock",
+        "options": {}
+      },
+      "id": "a678484f-635a-4c59-9328-ee28f735b9c4",
+      "name": "Notion: Create Onboarding Entry",
+      "type": "n8n-nodes-base.notion",
+      "typeVersion": 3,
+      "position": [
+        1328,
+        80
+      ],
+      "credentials": {
+        "notionOAuth2Api": {
+          "id": "7PQH0S9K5NbZljWY",
+          "name": "jackl_Notion"
+        }
+      },
+      "onError": "continueErrorOutput"
+    },
+    {
+      "parameters": {
+        "resource": "folder",
+        "name": "={{ $json.folderName }}",
+        "driveId": {
+          "__rl": true,
+          "mode": "list",
+          "value": "My Drive",
+          "cachedResultName": "My Drive"
+        },
+        "folderId": {
+          "__rl": true,
+          "value": "19IJSxjtnkuFL_FUtjUph7V0N6w3t0zOP",
+          "mode": "list",
+          "cachedResultName": "Employee Records",
+          "cachedResultUrl": "https://drive.google.com/drive/folders/19IJSxjtnkuFL_FUtjUph7V0N6w3t0zOP"
+        },
+        "options": {}
+      },
+      "id": "0b7b28ca-8774-4200-8935-c95dc0dc9391",
+      "name": "Google Drive: Create Employee Folder",
+      "type": "n8n-nodes-base.googleDrive",
+      "typeVersion": 3,
+      "position": [
+        1056,
+        304
+      ],
+      "credentials": {
+        "googleDriveOAuth2Api": {
+          "id": "TDHKjAvCkWhKGVLc",
+          "name": "Google Drive OAuth2 API"
+        }
+      },
+      "onError": "continueErrorOutput"
+    },
+    {
+      "parameters": {
+        "jsCode": "const basePath = $('Parse New Hire + Config').first().json.GDRIVE_PARENT_FOLDER_PATH\n  + '/' + $('Parse New Hire + Config').first().json.folderName;\n\nconst subFolders = ['01 - Contracts', '02 - Equipment', '03 - Training', '04 - Benefits', '05 - Personal Documents'];\n\nreturn subFolders.map(folder => ({\n  json: { folderPath: `${basePath}/${folder}`, folderName: folder, newHireData: $('Parse New Hire + Config').first().json }\n}));"
+      },
+      "id": "c01bab6b-7cdd-40ae-b00a-c0d08c7b4fc3",
+      "name": "Build SubFolder Paths",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1328,
+        288
+      ]
+    },
+    {
+      "parameters": {
+        "resource": "folder",
+        "name": "={{ $json.folderName }}",
+        "driveId": {
+          "__rl": true,
+          "mode": "list",
+          "value": "My Drive",
+          "cachedResultName": "My Drive"
+        },
+        "folderId": {
+          "__rl": true,
+          "value": "={{ $('Google Drive: Create Employee Folder').item.json.id }}",
+          "mode": "id"
+        },
+        "options": {}
+      },
+      "id": "5e6fa1cd-5199-4a7b-a990-659b6a0c2163",
+      "name": "Google Drive: Create SubFolders",
+      "type": "n8n-nodes-base.googleDrive",
+      "typeVersion": 3,
+      "position": [
+        1520,
+        288
+      ],
+      "credentials": {
+        "googleDriveOAuth2Api": {
+          "id": "TDHKjAvCkWhKGVLc",
+          "name": "Google Drive OAuth2 API"
+        }
+      },
+      "onError": "continueErrorOutput"
+    },
+    {
+      "parameters": {
+        "operation": "limit"
+      },
+      "id": "d930e53d-fefe-4d39-a8b8-30215ee9b37c",
+      "name": "Limit SubFolders Array",
+      "type": "n8n-nodes-base.itemLists",
+      "typeVersion": 3,
+      "position": [
+        1744,
+        272
+      ]
+    },
+    {
+      "parameters": {
+        "authentication": "oAuth2",
+        "resource": "channel",
+        "operation": "invite",
+        "channelId": {
+          "__rl": true,
+          "value": "C0AQBT71D4Y",
+          "mode": "list",
+          "cachedResultName": "n8n-lubbs-alerts"
+        },
+        "userIds": [
+          "U09P48WJAEN"
+        ]
+      },
+      "id": "297dac4c-a0a9-49be-8534-0e27bc2b5604",
+      "name": "Slack: Create Onboarding Channel",
+      "type": "n8n-nodes-base.slack",
+      "typeVersion": 2.7,
+      "position": [
+        1104,
+        608
+      ],
+      "webhookId": "5f2fb1fd-2f42-4b3d-ac8b-e40b55229ffb",
+      "credentials": {
+        "slackOAuth2Api": {
+          "id": "VJW7N0j7PSb8Q7Jq",
+          "name": "jackl_slack"
+        }
+      },
+      "onError": "continueErrorOutput"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "={{ 'Write a warm, personalised welcome email for a new employee with these details:\\n\\nName: ' + $('Parse New Hire + Config').first().json.fullName + '\\nRole: ' + $('Parse New Hire + Config').first().json.role + '\\nDepartment: ' + $('Parse New Hire + Config').first().json.department + '\\nStart Date: ' + $('Parse New Hire + Config').first().json.startDate + '\\nLocation: ' + $('Parse New Hire + Config').first().json.location }}",
+        "options": {
+          "systemMessage": "You are the company's People Operations team writing a welcome email to a new employee.\nWrite a warm, professional, and concise welcome email. Tone: friendly but not over-the-top.\nDo NOT use em dashes. Use short paragraphs.\nInclude:\n- Genuine welcome using their first name\n- One sentence acknowledging their role and what the team is excited about\n- What happens on day 1 (they will receive a calendar invite from their manager)\n- One sentence about culture / what makes working here special\n- Closing with excitement about them joining\nSign off as: The People Operations Team\nReturn ONLY the email body text, no subject line, no preamble, no JSON."
+        }
+      },
+      "id": "e329bfe7-441f-49e4-84d4-1ee41cbba116",
+      "name": "AI: Generate Welcome Email",
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 1.7,
+      "position": [
+        1040,
+        832
+      ],
+      "onError": "continueErrorOutput"
+    },
+    {
+      "parameters": {
+        "mode": "wait",
+        "options": {}
+      },
+      "id": "ea936e89-4855-4323-a726-f39b3438ae02",
+      "name": "Wait: Notion & Drive",
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 2.1,
+      "position": [
+        2000,
+        160
+      ]
+    },
+    {
+      "parameters": {
+        "mode": "wait",
+        "options": {}
+      },
+      "id": "395e1502-fb1f-483d-a611-335fc5f0e668",
+      "name": "Wait: Slack & Email",
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 2.1,
+      "position": [
+        1696,
+        640
+      ]
+    },
+    {
+      "parameters": {
+        "mode": "wait",
+        "options": {}
+      },
+      "id": "e24bdb0e-5553-4e76-8522-b47b6e015579",
+      "name": "Wait: All Branches",
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 2.1,
+      "position": [
+        2368,
+        144
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "const hire = $('Parse New Hire + Config').first().json;\n\nconst notionItem = $('Notion: Create Onboarding Entry').first().json || {};\nconst driveFolder = $('Google Drive: Create Employee Folder').first().json || {};\nconst slackChannel = $('Slack: Create Onboarding Channel').first().json || {};\nconst emailRes = $('Outlook: Send Welcome Email').first().json || {};\n\nconst notionSuccess = notionItem.id ? '✅ Notion Page ID: ' + notionItem.id : '❌ Notion Entry Failed';\nconst driveSuccess = driveFolder.id ? '✅ Google Drive Folder Provisioned (' + driveFolder.id + ')' : '❌ Google Drive Provisioning Failed';\nconst slackSuccess = slackChannel.id ? '✅ Slack Channel Created (' + slackChannel.id + ')' : '❌ Slack Channel Creation Failed';\nconst emailSuccess = emailRes.id ? '✅ Welcome email sent to ' + hire.email : '❌ AI Generation or Email Failed';\n\nconst summary = [\n  '🎉 New Team Member Onboarded: ' + hire.fullName,\n  '',\n  '*Role:* ' + hire.role,\n  '*Department:* ' + hire.department,\n  '*Start Date:* ' + hire.startDate,\n  '*Location:* ' + hire.location,\n  '*Manager:* ' + (hire.managerEmail || 'TBD'),\n  '',\n  '*Onboarding Task Status:*',\n  notionSuccess,\n  driveSuccess,\n  slackSuccess,\n  emailSuccess\n].join('\\n');\n\nreturn [{ json: { summary } }];"
+      },
+      "id": "3a1bbcf4-82fa-477d-979f-4aaccc6861d8",
+      "name": "Build HR Summary Card",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        2640,
+        144
+      ]
+    },
+    {
+      "parameters": {
+        "authentication": "oAuth2",
+        "select": "channel",
+        "channelId": {
+          "__rl": true,
+          "value": "#n8n-lubbs-alerts",
+          "mode": "name"
+        },
+        "text": "={{ $json.summary }}",
+        "otherOptions": {}
+      },
+      "id": "d833b6d4-73a1-4848-97d0-71cddfac112b",
+      "name": "Slack: Post HR Summary Card",
+      "type": "n8n-nodes-base.slack",
+      "typeVersion": 2.7,
+      "position": [
+        2880,
+        144
+      ],
+      "webhookId": "e506eedf-d527-49be-8209-9bffc008c02e",
+      "credentials": {
+        "slackOAuth2Api": {
+          "id": "VJW7N0j7PSb8Q7Jq",
+          "name": "jackl_slack"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "sendTo": "jack.lubbock@n8n.io",
+        "subject": "Hello and welcome to n8n!",
+        "message": "Welcome to the company, here is your employee handbook",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.2,
+      "position": [
+        1520,
+        816
+      ],
+      "id": "4dc6db8a-4df9-4881-90a9-da12e38f60b2",
+      "name": "Send a message",
+      "webhookId": "a7374a15-7834-42ae-ae3c-b65a20122108",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "WEi5xeqPn9qUGPdU",
+          "name": "Gmail account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "mode": "list",
+          "value": "claude-sonnet-5",
+          "cachedResultName": "Claude Sonnet 5"
+        },
+        "options": {}
+      },
+      "id": "d524b7fb-4e70-4c88-8676-9a865d0bbb47",
+      "name": "Anthropic Chat Model1",
+      "type": "@n8n/n8n-nodes-langchain.lmChatAnthropic",
+      "typeVersion": 1.6,
+      "position": [
+        1040,
+        992
+      ],
+      "credentials": {
+        "anthropicApi": {
+          "id": "uCPIbLTZkA9IfZ4J",
+          "name": "Anthropic account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "n8n-nodes-base.formTrigger",
+      "typeVersion": 2.6,
+      "position": [
+        -128,
+        304
+      ],
+      "id": "a181e0cb-594a-4dd5-99c1-51a5d08152e1",
+      "name": "On form submission",
+      "webhookId": "f254fde2-cbe3-49e3-889e-c23ecd6868db"
+    }
+  ],
+  "connections": {
+    "Error Trigger": {
+      "main": [
+        [
+          {
+            "node": "Build Error Alert Card",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Build Error Alert Card": {
+      "main": [
+        [
+          {
+            "node": "Slack: Post Error Alert",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "AI Agent": {
+      "main": [
+        [
+          {
+            "node": "Parse New Hire + Config",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Anthropic Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Parse New Hire + Config": {
+      "main": [
+        [
+          {
+            "node": "Notion: Create Onboarding Entry",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Google Drive: Create Employee Folder",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Slack: Create Onboarding Channel",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "AI: Generate Welcome Email",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Notion: Create Onboarding Entry": {
+      "main": [
+        [
+          {
+            "node": "Wait: Notion & Drive",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Drive: Create Employee Folder": {
+      "main": [
+        [
+          {
+            "node": "Build SubFolder Paths",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Build SubFolder Paths": {
+      "main": [
+        [
+          {
+            "node": "Google Drive: Create SubFolders",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Drive: Create SubFolders": {
+      "main": [
+        [
+          {
+            "node": "Limit SubFolders Array",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Limit SubFolders Array": {
+      "main": [
+        [
+          {
+            "node": "Wait: Notion & Drive",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "Slack: Create Onboarding Channel": {
+      "main": [
+        [
+          {
+            "node": "Wait: Slack & Email",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "AI: Generate Welcome Email": {
+      "main": [
+        [
+          {
+            "node": "Send a message",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait: Notion & Drive": {
+      "main": [
+        [
+          {
+            "node": "Wait: All Branches",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait: Slack & Email": {
+      "main": [
+        [
+          {
+            "node": "Wait: All Branches",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "Wait: All Branches": {
+      "main": [
+        [
+          {
+            "node": "Build HR Summary Card",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Build HR Summary Card": {
+      "main": [
+        [
+          {
+            "node": "Slack: Post HR Summary Card",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Send a message": {
+      "main": [
+        [
+          {
+            "node": "Wait: Slack & Email",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "Anthropic Chat Model1": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI: Generate Welcome Email",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "On form submission": {
+      "main": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate",
+    "availableInMCP": true
+  },
+  "triggerCount": 0,
+  "versionId": "ec1ae54b-eecc-4d39-8243-6bac164d0d71",
+  "owner": {
+    "type": "team",
+    "teamId": "cSMaXJCbuzMcMp3f",
+    "teamName": "OB Walthrough"
+  },
+  "parentFolderId": null,
+  "isArchived": false,
+  "nodeGroups": []
+}

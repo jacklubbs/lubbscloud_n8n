@@ -1,0 +1,52 @@
+{
+  "folders": [
+    {
+      "id": "eLEi5nbM1vxLE4rn",
+      "name": "Renewals",
+      "parentFolderId": null,
+      "homeProjectId": "VqlLVplbh3vWvOjX",
+      "createdAt": "2026-06-13T14:48:33.496Z",
+      "updatedAt": "2026-06-13T14:48:33.496Z"
+    },
+    {
+      "id": "P1Z7RBLBh80fvCxO",
+      "name": "learn.n8n.io",
+      "parentFolderId": null,
+      "homeProjectId": "D7E2YroCZkh1yQJe",
+      "createdAt": "2026-06-27T13:57:46.000Z",
+      "updatedAt": "2026-06-27T13:57:46.000Z"
+    },
+    {
+      "id": "RZdA72mChLGixL95",
+      "name": "Deterministic Steps + Agent Guardrails",
+      "parentFolderId": null,
+      "homeProjectId": "D7E2YroCZkh1yQJe",
+      "createdAt": "2026-08-26T11:42:54.377Z",
+      "updatedAt": "2026-08-26T11:42:54.377Z"
+    },
+    {
+      "id": "NyMueOrATixpaDBI",
+      "name": "Deterministic Steps & AI",
+      "parentFolderId": null,
+      "homeProjectId": "NLADg1q7HzWVmGym",
+      "createdAt": "2026-08-30T13:20:56.886Z",
+      "updatedAt": "2026-08-30T13:20:56.886Z"
+    },
+    {
+      "id": "afnU9X3H7736ewGl",
+      "name": "HITL",
+      "parentFolderId": null,
+      "homeProjectId": "NLADg1q7HzWVmGym",
+      "createdAt": "2026-08-30T14:43:07.494Z",
+      "updatedAt": "2026-08-30T14:43:07.494Z"
+    },
+    {
+      "id": "Es1cBcm8tXiIpDS5",
+      "name": "DevSecOps",
+      "parentFolderId": null,
+      "homeProjectId": "cSMaXJCbuzMcMp3f",
+      "createdAt": "2026-10-30T16:52:31.632Z",
+      "updatedAt": "2026-10-30T16:52:31.632Z"
+    }
+  ]
+}

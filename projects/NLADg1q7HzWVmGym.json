@@ -1,0 +1,16 @@
+{
+  "id": "NLADg1q7HzWVmGym",
+  "name": "AI in Production",
+  "icon": {
+    "type": "icon",
+    "value": "cpu"
+  },
+  "description": "",
+  "type": "team",
+  "owner": {
+    "type": "team",
+    "teamId": "NLADg1q7HzWVmGym",
+    "teamName": "AI in Production"
+  },
+  "variableStubs": []
+}

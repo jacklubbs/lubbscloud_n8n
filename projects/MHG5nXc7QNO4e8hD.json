@@ -1,0 +1,16 @@
+{
+  "id": "MHG5nXc7QNO4e8hD",
+  "name": "Exploration",
+  "icon": {
+    "type": "emoji",
+    "value": "🗾"
+  },
+  "description": "",
+  "type": "team",
+  "owner": {
+    "type": "team",
+    "teamId": "MHG5nXc7QNO4e8hD",
+    "teamName": "Exploration"
+  },
+  "variableStubs": []
+}

@@ -1,0 +1,16 @@
+{
+  "id": "qGxiLpO30xFsrlns",
+  "name": "Customer Intelligence Platform",
+  "icon": {
+    "type": "icon",
+    "value": "brain-circuit"
+  },
+  "description": "",
+  "type": "team",
+  "owner": {
+    "type": "team",
+    "teamId": "qGxiLpO30xFsrlns",
+    "teamName": "Customer Intelligence Platform"
+  },
+  "variableStubs": []
+}

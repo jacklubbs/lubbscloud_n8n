@@ -1,0 +1,16 @@
+{
+  "id": "3mFKceCuonI4mmxu",
+  "name": "Utilities",
+  "icon": {
+    "type": "emoji",
+    "value": "🔧"
+  },
+  "description": "",
+  "type": "team",
+  "owner": {
+    "type": "team",
+    "teamId": "3mFKceCuonI4mmxu",
+    "teamName": "Utilities"
+  },
+  "variableStubs": []
+}

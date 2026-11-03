@@ -1,0 +1,214 @@
+{
+  "tags": [
+    {
+      "id": "m2Yvx2QtGV8ZwhPS",
+      "name": "n8n101-course"
+    },
+    {
+      "id": "rr7xRbWTw6jitM68",
+      "name": "Utility"
+    },
+    {
+      "id": "Wgg01es0nibEjcZv",
+      "name": "Slack"
+    },
+    {
+      "id": "jFmbSMWpTj7decSr",
+      "name": "Education"
+    },
+    {
+      "id": "JiTFumex7tUusIG6",
+      "name": "contentCapture"
+    },
+    {
+      "id": "zwjQtt4PPmfwEMML",
+      "name": "Academy"
+    },
+    {
+      "id": "YRkRSWj4WOMupEbk",
+      "name": "n8n101"
+    },
+    {
+      "id": "Ugz2IxeydFAfkGJb",
+      "name": "n8n102"
+    },
+    {
+      "id": "nqcOnLP1IhnTvYaq",
+      "name": "n8n-102"
+    },
+    {
+      "id": "CbGNDdZ6kr5xIPaf",
+      "name": "n8n103"
+    },
+    {
+      "id": "vDHgZUtgYF8hY75H",
+      "name": "n8n103-course"
+    },
+    {
+      "id": "gC0sejmwkF6kOrJ5",
+      "name": "subworkflow"
+    },
+    {
+      "id": "jnSsn9GtgOVDFYGb",
+      "name": "tool"
+    },
+    {
+      "id": "gu2gpBnj44SOe6Hm",
+      "name": "cust-intel-platform"
+    }
+  ],
+  "mappings": [
+    {
+      "workflowId": "OEUmMmFwldXdjEnc",
+      "tagId": "rr7xRbWTw6jitM68"
+    },
+    {
+      "workflowId": "Y6lPH1uWompF4RP4",
+      "tagId": "Wgg01es0nibEjcZv"
+    },
+    {
+      "workflowId": "Cp0w9J2FeI9HR2Ns",
+      "tagId": "zwjQtt4PPmfwEMML"
+    },
+    {
+      "workflowId": "XmePGl1GEOE7xqSV",
+      "tagId": "zwjQtt4PPmfwEMML"
+    },
+    {
+      "workflowId": "pYfZOeUGeay562EQ",
+      "tagId": "zwjQtt4PPmfwEMML"
+    },
+    {
+      "workflowId": "YhIu4zQ9x3oRDYZZ",
+      "tagId": "zwjQtt4PPmfwEMML"
+    },
+    {
+      "workflowId": "FmWYZ9zT5EZ6W2yl",
+      "tagId": "zwjQtt4PPmfwEMML"
+    },
+    {
+      "workflowId": "MQS5Nd3NrXCUpQul",
+      "tagId": "zwjQtt4PPmfwEMML"
+    },
+    {
+      "workflowId": "FaPFoBOXFlrsZ8Dt",
+      "tagId": "m2Yvx2QtGV8ZwhPS"
+    },
+    {
+      "workflowId": "NUQm9yH1LlQ6P1vY",
+      "tagId": "YRkRSWj4WOMupEbk"
+    },
+    {
+      "workflowId": "I6DYspT5AgBTfBny",
+      "tagId": "zwjQtt4PPmfwEMML"
+    },
+    {
+      "workflowId": "fMW11aP7SWDyaBAj",
+      "tagId": "zwjQtt4PPmfwEMML"
+    },
+    {
+      "workflowId": "rju2GCarRLa05bZ5",
+      "tagId": "Ugz2IxeydFAfkGJb"
+    },
+    {
+      "workflowId": "hYhe5MoZsmKtbmby",
+      "tagId": "Ugz2IxeydFAfkGJb"
+    },
+    {
+      "workflowId": "OlczbyERCmM8tiBG",
+      "tagId": "Ugz2IxeydFAfkGJb"
+    },
+    {
+      "workflowId": "rnebbVr9ypBoPi7x",
+      "tagId": "vDHgZUtgYF8hY75H"
+    },
+    {
+      "workflowId": "rRtdAVbRQsTEPeX1",
+      "tagId": "gC0sejmwkF6kOrJ5"
+    },
+    {
+      "workflowId": "rRtdAVbRQsTEPeX1",
+      "tagId": "jnSsn9GtgOVDFYGb"
+    },
+    {
+      "workflowId": "0AcE5NUk7LfthFn8",
+      "tagId": "gC0sejmwkF6kOrJ5"
+    },
+    {
+      "workflowId": "0AcE5NUk7LfthFn8",
+      "tagId": "jnSsn9GtgOVDFYGb"
+    },
+    {
+      "workflowId": "hvUug6IPQRUNVLbZ",
+      "tagId": "gu2gpBnj44SOe6Hm"
+    },
+    {
+      "workflowId": "II7BzjjqFKkD6jvn",
+      "tagId": "gu2gpBnj44SOe6Hm"
+    },
+    {
+      "workflowId": "w05nfOKsBRbwGrBT",
+      "tagId": "gu2gpBnj44SOe6Hm"
+    },
+    {
+      "workflowId": "WR23LvmWZR8N7oQS",
+      "tagId": "gu2gpBnj44SOe6Hm"
+    },
+    {
+      "workflowId": "NV839XXGJebIF4MT",
+      "tagId": "gu2gpBnj44SOe6Hm"
+    },
+    {
+      "workflowId": "ckbXiT6spYGz56BD",
+      "tagId": "gu2gpBnj44SOe6Hm"
+    },
+    {
+      "workflowId": "SoNwz0mjrJrqk9j0",
+      "tagId": "vDHgZUtgYF8hY75H"
+    },
+    {
+      "workflowId": "8zPJEllODsA5mQWj",
+      "tagId": "vDHgZUtgYF8hY75H"
+    },
+    {
+      "workflowId": "kInRKJhyXs9bio21",
+      "tagId": "vDHgZUtgYF8hY75H"
+    },
+    {
+      "workflowId": "J1cSLxeBaInfRlEZ",
+      "tagId": "vDHgZUtgYF8hY75H"
+    },
+    {
+      "workflowId": "1F51osqBnTzx2buD",
+      "tagId": "vDHgZUtgYF8hY75H"
+    },
+    {
+      "workflowId": "s3GbOjeSVq052wI0",
+      "tagId": "vDHgZUtgYF8hY75H"
+    },
+    {
+      "workflowId": "4XaZ3uwAAHGhJ3qS",
+      "tagId": "vDHgZUtgYF8hY75H"
+    },
+    {
+      "workflowId": "FRGEPyyenM0bptbA",
+      "tagId": "vDHgZUtgYF8hY75H"
+    },
+    {
+      "workflowId": "umsBdpoDnjI34W8X",
+      "tagId": "CbGNDdZ6kr5xIPaf"
+    },
+    {
+      "workflowId": "ugY1unLZFTo9iFtd",
+      "tagId": "JiTFumex7tUusIG6"
+    },
+    {
+      "workflowId": "YVJGAPK6yUq7Ucbz",
+      "tagId": "JiTFumex7tUusIG6"
+    },
+    {
+      "workflowId": "9iDDKPA6sf6eEsP7",
+      "tagId": "jFmbSMWpTj7decSr"
+    }
+  ]
+}
