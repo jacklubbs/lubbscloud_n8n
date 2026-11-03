@@ -1,0 +1,17 @@
+{
+  "id": "XOjHFSuWlrfDEb7x",
+  "name": "n8n Academy API Key",
+  "type": "httpHeaderAuth",
+  "data": {
+    "name": "",
+    "value": ""
+  },
+  "ownedBy": {
+    "type": "team",
+    "teamId": "D7E2YroCZkh1yQJe",
+    "teamName": "n8nEssentailsAcademy"
+  },
+  "isGlobal": false,
+  "isResolvable": false,
+  "resolvableAllowFallback": false
+}

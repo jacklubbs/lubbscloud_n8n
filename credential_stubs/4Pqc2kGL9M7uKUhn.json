@@ -1,0 +1,16 @@
+{
+  "id": "4Pqc2kGL9M7uKUhn",
+  "name": "n8n Quickstart S1 Discord Webhook account",
+  "type": "discordWebhookApi",
+  "data": {
+    "webhookUri": ""
+  },
+  "ownedBy": {
+    "type": "team",
+    "teamId": "D7E2YroCZkh1yQJe",
+    "teamName": "n8nEssentailsAcademy"
+  },
+  "isGlobal": false,
+  "isResolvable": false,
+  "resolvableAllowFallback": false
+}

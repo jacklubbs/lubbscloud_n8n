@@ -1,0 +1,49 @@
+{
+  "id": "RcjovDeax5JBJW02",
+  "name": "releases",
+  "columns": [
+    {
+      "id": "hfiioc3Fl7BXig96",
+      "name": "releaseTitle",
+      "type": "string",
+      "index": 0
+    },
+    {
+      "id": "WFxhJ6bCvRd5tKCC",
+      "name": "sourceType",
+      "type": "string",
+      "index": 1
+    },
+    {
+      "id": "zLktGq6XLrtfW3KU",
+      "name": "sourceUrl",
+      "type": "string",
+      "index": 2
+    },
+    {
+      "id": "YNhEYX1HeiuyXRZ4",
+      "name": "summaryText",
+      "type": "string",
+      "index": 3
+    },
+    {
+      "id": "srxwzcLQZlumzRPv",
+      "name": "publishedDate",
+      "type": "date",
+      "index": 4
+    },
+    {
+      "id": "uBVukrsbjMplnHes",
+      "name": "embeddingStatus",
+      "type": "string",
+      "index": 5
+    }
+  ],
+  "ownedBy": {
+    "type": "team",
+    "teamId": "qGxiLpO30xFsrlns",
+    "teamName": "Customer Intelligence Platform"
+  },
+  "createdAt": "2026-07-16T20:29:32.722Z",
+  "updatedAt": "2026-07-16T20:29:32.722Z"
+}

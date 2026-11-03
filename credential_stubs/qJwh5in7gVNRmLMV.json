@@ -1,0 +1,18 @@
+{
+  "id": "qJwh5in7gVNRmLMV",
+  "name": "jackl_supabase",
+  "type": "supabaseApi",
+  "data": {
+    "host": "",
+    "serviceRole": ""
+  },
+  "ownedBy": {
+    "type": "personal",
+    "projectId": "O0FJglQJ7ptmEUnF",
+    "projectName": "Jack Lubbock <jack.lubbock@n8n.io>",
+    "personalEmail": "jack.lubbock@n8n.io"
+  },
+  "isGlobal": false,
+  "isResolvable": false,
+  "resolvableAllowFallback": false
+}

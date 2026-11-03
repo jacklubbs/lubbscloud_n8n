@@ -1,0 +1,16 @@
+{
+  "id": "O9MOMIL8jUFKo8fe",
+  "name": "jackl_gdocs",
+  "type": "googleDocsOAuth2Api",
+  "data": {
+    "allowedHttpRequestDomains": ""
+  },
+  "ownedBy": {
+    "type": "team",
+    "teamId": "VqlLVplbh3vWvOjX",
+    "teamName": "workAutomations"
+  },
+  "isGlobal": false,
+  "isResolvable": false,
+  "resolvableAllowFallback": false
+}

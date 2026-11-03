@@ -1,0 +1,49 @@
+{
+  "id": "968fJl1FAWZJS60V",
+  "name": "n8n102_course_orders",
+  "columns": [
+    {
+      "id": "XF4ScMD0ioHSMdI7",
+      "name": "order_id",
+      "type": "string",
+      "index": 0
+    },
+    {
+      "id": "53ZYEknYTMlHBvcT",
+      "name": "customer_id",
+      "type": "string",
+      "index": 1
+    },
+    {
+      "id": "wREDE5ZSiMnDD0tN",
+      "name": "total",
+      "type": "number",
+      "index": 2
+    },
+    {
+      "id": "7BvySz08StJmoKkY",
+      "name": "status",
+      "type": "string",
+      "index": 3
+    },
+    {
+      "id": "6rmAZg0aeHmsfmuB",
+      "name": "received_at",
+      "type": "date",
+      "index": 4
+    },
+    {
+      "id": "sbWWBmfknXlQK9WN",
+      "name": "processed_at",
+      "type": "date",
+      "index": 5
+    }
+  ],
+  "ownedBy": {
+    "type": "team",
+    "teamId": "D7E2YroCZkh1yQJe",
+    "teamName": "n8nEssentailsAcademy"
+  },
+  "createdAt": "2026-07-09T21:52:01.486Z",
+  "updatedAt": "2026-07-13T20:32:49.016Z"
+}

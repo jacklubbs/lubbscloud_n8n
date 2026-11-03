@@ -1,0 +1,37 @@
+{
+  "id": "5LHDeccSqJdDvPZe",
+  "name": "Deploy Events",
+  "columns": [
+    {
+      "id": "jt6nfyDGmD1daNrr",
+      "name": "serviceName",
+      "type": "string",
+      "index": 0
+    },
+    {
+      "id": "ZjkpPIcSeq6a00Cf",
+      "name": "version",
+      "type": "string",
+      "index": 1
+    },
+    {
+      "id": "QJq5PgTwWb2aDsrj",
+      "name": "status",
+      "type": "string",
+      "index": 2
+    },
+    {
+      "id": "66YFWUFkMIDqahG0",
+      "name": "isAlertSent",
+      "type": "boolean",
+      "index": 3
+    }
+  ],
+  "ownedBy": {
+    "type": "team",
+    "teamId": "cSMaXJCbuzMcMp3f",
+    "teamName": "OB Walthrough"
+  },
+  "createdAt": "2026-10-30T16:52:31.781Z",
+  "updatedAt": "2026-10-30T16:59:49.222Z"
+}

@@ -1,0 +1,18 @@
+{
+  "id": "qeDLHMFLTxhgDgTI",
+  "name": "n8n free OpenAI API credits",
+  "type": "openAiApi",
+  "data": {
+    "apiKey": "",
+    "url": ""
+  },
+  "ownedBy": {
+    "type": "personal",
+    "projectId": "O0FJglQJ7ptmEUnF",
+    "projectName": "Jack Lubbock <jack.lubbock@n8n.io>",
+    "personalEmail": "jack.lubbock@n8n.io"
+  },
+  "isGlobal": false,
+  "isResolvable": false,
+  "resolvableAllowFallback": false
+}

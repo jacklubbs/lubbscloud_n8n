@@ -1,0 +1,25 @@
+{
+  "id": "cHuwpZ0WyW4Jk5f6",
+  "name": "processingOrders",
+  "columns": [
+    {
+      "id": "KekFXsjSLSHZKRib",
+      "name": "orderID",
+      "type": "number",
+      "index": 0
+    },
+    {
+      "id": "SDk79P5CJWb7NDIx",
+      "name": "employeeName",
+      "type": "string",
+      "index": 1
+    }
+  ],
+  "ownedBy": {
+    "type": "team",
+    "teamId": "D7E2YroCZkh1yQJe",
+    "teamName": "n8nEssentailsAcademy"
+  },
+  "createdAt": "2026-06-24T20:10:47.389Z",
+  "updatedAt": "2026-06-24T20:12:08.172Z"
+}

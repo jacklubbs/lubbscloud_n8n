@@ -1,0 +1,16 @@
+{
+  "id": "7W4nkgOJmbWFLc3R",
+  "name": "Discord Bot account",
+  "type": "discordBotApi",
+  "data": {
+    "botToken": ""
+  },
+  "ownedBy": {
+    "type": "team",
+    "teamId": "D7E2YroCZkh1yQJe",
+    "teamName": "n8nEssentailsAcademy"
+  },
+  "isGlobal": false,
+  "isResolvable": false,
+  "resolvableAllowFallback": false
+}

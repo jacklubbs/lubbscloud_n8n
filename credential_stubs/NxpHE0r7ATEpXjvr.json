@@ -1,0 +1,18 @@
+{
+  "id": "NxpHE0r7ATEpXjvr",
+  "name": "jackl_youtube",
+  "type": "youTubeOAuth2Api",
+  "data": {
+    "clientId": "",
+    "clientSecret": ""
+  },
+  "ownedBy": {
+    "type": "personal",
+    "projectId": "O0FJglQJ7ptmEUnF",
+    "projectName": "Jack Lubbock <jack.lubbock@n8n.io>",
+    "personalEmail": "jack.lubbock@n8n.io"
+  },
+  "isGlobal": false,
+  "isResolvable": false,
+  "resolvableAllowFallback": false
+}

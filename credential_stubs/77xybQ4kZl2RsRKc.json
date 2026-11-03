@@ -1,0 +1,16 @@
+{
+  "id": "77xybQ4kZl2RsRKc",
+  "name": "lubbs_gsheets",
+  "type": "googleSheetsOAuth2Api",
+  "data": {
+    "allowedHttpRequestDomains": ""
+  },
+  "ownedBy": {
+    "type": "team",
+    "teamId": "VqlLVplbh3vWvOjX",
+    "teamName": "workAutomations"
+  },
+  "isGlobal": false,
+  "isResolvable": false,
+  "resolvableAllowFallback": false
+}

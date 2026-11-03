@@ -1,0 +1,49 @@
+{
+  "id": "drd1UoL3m0aTE2MW",
+  "name": "insights",
+  "columns": [
+    {
+      "id": "iBTxsh5nkMpyftEc",
+      "name": "insightType",
+      "type": "string",
+      "index": 0
+    },
+    {
+      "id": "p7amwqsfQgt3bUfR",
+      "name": "title",
+      "type": "string",
+      "index": 1
+    },
+    {
+      "id": "4qVk11hLQHnWj8hO",
+      "name": "description",
+      "type": "string",
+      "index": 2
+    },
+    {
+      "id": "uqXpRBCLaaVPrXjs",
+      "name": "affectedCustomerCount",
+      "type": "number",
+      "index": 3
+    },
+    {
+      "id": "Pcrei6tf3DiVhLlL",
+      "name": "confidence",
+      "type": "number",
+      "index": 4
+    },
+    {
+      "id": "PbLFdLb2so7i5gBM",
+      "name": "generatedAt",
+      "type": "date",
+      "index": 5
+    }
+  ],
+  "ownedBy": {
+    "type": "team",
+    "teamId": "qGxiLpO30xFsrlns",
+    "teamName": "Customer Intelligence Platform"
+  },
+  "createdAt": "2026-07-16T20:50:56.795Z",
+  "updatedAt": "2026-07-16T20:50:56.795Z"
+}

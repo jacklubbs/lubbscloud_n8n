@@ -1,0 +1,25 @@
+{
+  "id": "Vm6nqKsi7nwBrFQ9",
+  "name": "verified_sessions",
+  "columns": [
+    {
+      "id": "ZLfmXczxhTU1WjHY",
+      "name": "sessionId",
+      "type": "string",
+      "index": 0
+    },
+    {
+      "id": "Nd9DBDcJ074qVKH5",
+      "name": "customerId",
+      "type": "string",
+      "index": 1
+    }
+  ],
+  "ownedBy": {
+    "type": "team",
+    "teamId": "D7E2YroCZkh1yQJe",
+    "teamName": "n8nEssentailsAcademy"
+  },
+  "createdAt": "2026-07-15T19:01:11.787Z",
+  "updatedAt": "2026-07-15T19:01:11.787Z"
+}

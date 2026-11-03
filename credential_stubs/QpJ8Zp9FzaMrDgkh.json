@@ -1,0 +1,16 @@
+{
+  "id": "QpJ8Zp9FzaMrDgkh",
+  "name": "Supadata account",
+  "type": "supadataApi",
+  "data": {
+    "apiKey": ""
+  },
+  "ownedBy": {
+    "type": "team",
+    "teamId": "D7E2YroCZkh1yQJe",
+    "teamName": "n8nEssentailsAcademy"
+  },
+  "isGlobal": false,
+  "isResolvable": false,
+  "resolvableAllowFallback": false
+}

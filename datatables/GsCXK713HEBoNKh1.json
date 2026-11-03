@@ -1,0 +1,43 @@
+{
+  "id": "GsCXK713HEBoNKh1",
+  "name": "support_signals",
+  "columns": [
+    {
+      "id": "2bxbwbd7ZRQ8vdo7",
+      "name": "customerId",
+      "type": "string",
+      "index": 0
+    },
+    {
+      "id": "blgUNm8lZzcjeyXB",
+      "name": "ticketId",
+      "type": "string",
+      "index": 1
+    },
+    {
+      "id": "bd3IFlPY45LnEhQw",
+      "name": "category",
+      "type": "string",
+      "index": 2
+    },
+    {
+      "id": "j6sLNReOCruN1zX9",
+      "name": "status",
+      "type": "string",
+      "index": 3
+    },
+    {
+      "id": "8TGo268hHqYVVA8u",
+      "name": "openedAt",
+      "type": "date",
+      "index": 4
+    }
+  ],
+  "ownedBy": {
+    "type": "team",
+    "teamId": "qGxiLpO30xFsrlns",
+    "teamName": "Customer Intelligence Platform"
+  },
+  "createdAt": "2026-07-16T20:29:38.257Z",
+  "updatedAt": "2026-07-16T20:29:38.257Z"
+}

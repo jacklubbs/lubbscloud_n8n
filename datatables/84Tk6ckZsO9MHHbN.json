@@ -1,0 +1,43 @@
+{
+  "id": "84Tk6ckZsO9MHHbN",
+  "name": "usage_signals",
+  "columns": [
+    {
+      "id": "pRzixfQPlzBnSJcb",
+      "name": "customerId",
+      "type": "string",
+      "index": 0
+    },
+    {
+      "id": "hCdrEXpnjcPj9tFE",
+      "name": "featureName",
+      "type": "string",
+      "index": 1
+    },
+    {
+      "id": "v8nNBu12mOivsOPG",
+      "name": "usageStatus",
+      "type": "string",
+      "index": 2
+    },
+    {
+      "id": "5kVVFB1m4er6rzdL",
+      "name": "metricValue",
+      "type": "number",
+      "index": 3
+    },
+    {
+      "id": "5wbM33mmOZKCJyNk",
+      "name": "recordedAt",
+      "type": "date",
+      "index": 4
+    }
+  ],
+  "ownedBy": {
+    "type": "team",
+    "teamId": "qGxiLpO30xFsrlns",
+    "teamName": "Customer Intelligence Platform"
+  },
+  "createdAt": "2026-07-16T20:29:40.931Z",
+  "updatedAt": "2026-07-16T20:29:40.931Z"
+}

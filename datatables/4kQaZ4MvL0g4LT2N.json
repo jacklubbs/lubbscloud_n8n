@@ -1,0 +1,55 @@
+{
+  "id": "4kQaZ4MvL0g4LT2N",
+  "name": "oppDataAndContacts",
+  "columns": [
+    {
+      "id": "5gat7o0AqaiI5RXf",
+      "name": "account_id",
+      "type": "string",
+      "index": 0
+    },
+    {
+      "id": "WHaewIxdqIPkL6rz",
+      "name": "account_name",
+      "type": "string",
+      "index": 1
+    },
+    {
+      "id": "lJwNUiqjve7NGKnG",
+      "name": "opportunity_id",
+      "type": "string",
+      "index": 2
+    },
+    {
+      "id": "HiK5bBVvyxaff7H8",
+      "name": "close_datestri",
+      "type": "string",
+      "index": 3
+    },
+    {
+      "id": "FoabTvQAN72riyk2",
+      "name": "contract_type",
+      "type": "string",
+      "index": 4
+    },
+    {
+      "id": "7iyaO8udDKW4FCYP",
+      "name": "contact_emails",
+      "type": "string",
+      "index": 5
+    },
+    {
+      "id": "M4mAiCVSXtTpe28O",
+      "name": "close_date",
+      "type": "date",
+      "index": 6
+    }
+  ],
+  "ownedBy": {
+    "type": "team",
+    "teamId": "VqlLVplbh3vWvOjX",
+    "teamName": "workAutomations"
+  },
+  "createdAt": "2026-06-14T11:00:44.770Z",
+  "updatedAt": "2026-06-14T11:48:25.023Z"
+}

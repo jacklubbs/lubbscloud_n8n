@@ -1,0 +1,43 @@
+{
+  "id": "OfccdzVHZGUhN4hu",
+  "name": "customer_profiles",
+  "columns": [
+    {
+      "id": "KA5xGrycBjBIG7EU",
+      "name": "salesforceId",
+      "type": "string",
+      "index": 0
+    },
+    {
+      "id": "VqJYXYAbxfCqqtv1",
+      "name": "customerName",
+      "type": "string",
+      "index": 1
+    },
+    {
+      "id": "rfmbbGiTxTYwzdj0",
+      "name": "csmOwner",
+      "type": "string",
+      "index": 2
+    },
+    {
+      "id": "FlzvOZw8VqlcfT9O",
+      "name": "primaryContactEmail",
+      "type": "string",
+      "index": 3
+    },
+    {
+      "id": "O7uG4OiPrvyC734r",
+      "name": "primaryContactName",
+      "type": "string",
+      "index": 4
+    }
+  ],
+  "ownedBy": {
+    "type": "team",
+    "teamId": "qGxiLpO30xFsrlns",
+    "teamName": "Customer Intelligence Platform"
+  },
+  "createdAt": "2026-07-16T20:29:27.164Z",
+  "updatedAt": "2026-07-16T20:29:27.164Z"
+}

@@ -1,0 +1,61 @@
+{
+  "id": "ufzx5MIA4faFIEIo",
+  "name": "customer_interests",
+  "columns": [
+    {
+      "id": "LXKtvhT5jEMtatGK",
+      "name": "customerId",
+      "type": "string",
+      "index": 0
+    },
+    {
+      "id": "XmGgB2kHkXKX0R1Z",
+      "name": "customerName",
+      "type": "string",
+      "index": 1
+    },
+    {
+      "id": "h0uT1KJbA015pT6I",
+      "name": "interestText",
+      "type": "string",
+      "index": 2
+    },
+    {
+      "id": "gcAqT76u2iIcfQuj",
+      "name": "interestType",
+      "type": "string",
+      "index": 3
+    },
+    {
+      "id": "64l0aP6rrDU1wtC2",
+      "name": "confidenceScore",
+      "type": "number",
+      "index": 4
+    },
+    {
+      "id": "FDzLrgbWpx4PwhoJ",
+      "name": "sourceCallId",
+      "type": "string",
+      "index": 5
+    },
+    {
+      "id": "x4CvTcvRym9InitH",
+      "name": "dateExpressed",
+      "type": "date",
+      "index": 6
+    },
+    {
+      "id": "f06ETvQq8QRPgl7m",
+      "name": "embeddingStatus",
+      "type": "string",
+      "index": 7
+    }
+  ],
+  "ownedBy": {
+    "type": "team",
+    "teamId": "qGxiLpO30xFsrlns",
+    "teamName": "Customer Intelligence Platform"
+  },
+  "createdAt": "2026-07-16T20:29:30.244Z",
+  "updatedAt": "2026-07-16T20:29:30.244Z"
+}

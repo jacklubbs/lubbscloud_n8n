@@ -1,0 +1,17 @@
+{
+  "id": "2cRAUXDgrIVb7AcL",
+  "name": "jackl_renewalsDB",
+  "type": "supabaseApi",
+  "data": {
+    "host": "",
+    "serviceRole": ""
+  },
+  "ownedBy": {
+    "type": "team",
+    "teamId": "VqlLVplbh3vWvOjX",
+    "teamName": "workAutomations"
+  },
+  "isGlobal": false,
+  "isResolvable": false,
+  "resolvableAllowFallback": false
+}

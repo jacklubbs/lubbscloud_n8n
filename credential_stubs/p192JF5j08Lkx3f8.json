@@ -1,0 +1,16 @@
+{
+  "id": "p192JF5j08Lkx3f8",
+  "name": "jackl_gsheets",
+  "type": "googleSheetsOAuth2Api",
+  "data": {
+    "allowedHttpRequestDomains": ""
+  },
+  "ownedBy": {
+    "type": "team",
+    "teamId": "D7E2YroCZkh1yQJe",
+    "teamName": "n8nEssentailsAcademy"
+  },
+  "isGlobal": false,
+  "isResolvable": false,
+  "resolvableAllowFallback": false
+}

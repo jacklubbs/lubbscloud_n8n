@@ -1,0 +1,43 @@
+{
+  "id": "qnCcnr4lLc9y4mg6",
+  "name": "orders",
+  "columns": [
+    {
+      "id": "yJtS8G8y7ll90Wch",
+      "name": "orderID",
+      "type": "number",
+      "index": 0
+    },
+    {
+      "id": "SRk2TaXmXPfb6HOY",
+      "name": "customerID",
+      "type": "number",
+      "index": 1
+    },
+    {
+      "id": "uu0Q8OIogKDX4RzD",
+      "name": "employeeName",
+      "type": "string",
+      "index": 2
+    },
+    {
+      "id": "T7cfSaoZGoufL7Pv",
+      "name": "orderStatus",
+      "type": "string",
+      "index": 3
+    },
+    {
+      "id": "TrI6atb2ZwpMMdXY",
+      "name": "orderPrice",
+      "type": "number",
+      "index": 4
+    }
+  ],
+  "ownedBy": {
+    "type": "team",
+    "teamId": "D7E2YroCZkh1yQJe",
+    "teamName": "n8nEssentailsAcademy"
+  },
+  "createdAt": "2026-06-24T19:52:17.936Z",
+  "updatedAt": "2026-06-24T20:07:04.696Z"
+}

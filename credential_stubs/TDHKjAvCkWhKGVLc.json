@@ -1,0 +1,17 @@
+{
+  "id": "TDHKjAvCkWhKGVLc",
+  "name": "Google Drive OAuth2 API",
+  "type": "googleDriveOAuth2Api",
+  "data": {
+    "allowedHttpRequestDomains": ""
+  },
+  "ownedBy": {
+    "type": "personal",
+    "projectId": "O0FJglQJ7ptmEUnF",
+    "projectName": "Jack Lubbock <jack.lubbock@n8n.io>",
+    "personalEmail": "jack.lubbock@n8n.io"
+  },
+  "isGlobal": false,
+  "isResolvable": false,
+  "resolvableAllowFallback": false
+}

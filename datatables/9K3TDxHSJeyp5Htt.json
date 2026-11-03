@@ -1,0 +1,49 @@
+{
+  "id": "9K3TDxHSJeyp5Htt",
+  "name": "customers",
+  "columns": [
+    {
+      "id": "VgKHcAK1q3wdShzd",
+      "name": "customerID",
+      "type": "number",
+      "index": 0
+    },
+    {
+      "id": "DZ91tVjbt5f4KYIr",
+      "name": "customerCountry",
+      "type": "string",
+      "index": 1
+    },
+    {
+      "id": "428589oe9J8lwlqq",
+      "name": "customerEmail",
+      "type": "string",
+      "index": 2
+    },
+    {
+      "id": "1CqralCt7giwADhq",
+      "name": "customerSince",
+      "type": "date",
+      "index": 3
+    },
+    {
+      "id": "5pBKI9THiWIw1o7y",
+      "name": "region",
+      "type": "string",
+      "index": 4
+    },
+    {
+      "id": "fwMuw20rDzKV8uUr",
+      "name": "subregion",
+      "type": "string",
+      "index": 5
+    }
+  ],
+  "ownedBy": {
+    "type": "team",
+    "teamId": "D7E2YroCZkh1yQJe",
+    "teamName": "n8nEssentailsAcademy"
+  },
+  "createdAt": "2026-06-28T17:44:33.930Z",
+  "updatedAt": "2026-07-03T07:42:33.584Z"
+}

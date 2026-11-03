@@ -1,0 +1,16 @@
+{
+  "id": "DjfF5nVn9hH6EeYG",
+  "name": "lubbs_gmail",
+  "type": "gmailOAuth2",
+  "data": {
+    "allowedHttpRequestDomains": ""
+  },
+  "ownedBy": {
+    "type": "team",
+    "teamId": "VqlLVplbh3vWvOjX",
+    "teamName": "workAutomations"
+  },
+  "isGlobal": false,
+  "isResolvable": false,
+  "resolvableAllowFallback": false
+}

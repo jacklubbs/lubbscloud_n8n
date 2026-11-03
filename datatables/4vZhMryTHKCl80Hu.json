@@ -1,0 +1,68 @@
+{
+  "id": "4vZhMryTHKCl80Hu",
+  "name": "workflow_guardrails",
+  "columns": [
+    {
+      "id": "ThTDVk4cv0UX2Gk0",
+      "name": "workflow_id",
+      "type": "string",
+      "index": 0
+    },
+    {
+      "id": "sfyl108HFEqNL416",
+      "name": "workflow_name",
+      "type": "string",
+      "index": 1
+    },
+    {
+      "id": "Rn8Jn44tA60jqweT",
+      "name": "execution_count",
+      "type": "number",
+      "index": 2
+    },
+    {
+      "id": "hGOZFv89VTXXczAF",
+      "name": "threshold",
+      "type": "number",
+      "index": 3
+    },
+    {
+      "id": "D0ZRTcX0RLnWu1yZ",
+      "name": "window_hours",
+      "type": "number",
+      "index": 4
+    },
+    {
+      "id": "PqgTuq9VH4iqWUuv",
+      "name": "window_start",
+      "type": "date",
+      "index": 5
+    },
+    {
+      "id": "XzVeJGt8NoAwxnWL",
+      "name": "last_execution",
+      "type": "date",
+      "index": 6
+    },
+    {
+      "id": "FvO0YZVjKQLxH69A",
+      "name": "blocked_count",
+      "type": "number",
+      "index": 7
+    },
+    {
+      "id": "SFriVGQOJxkUClPx",
+      "name": "enabled",
+      "type": "boolean",
+      "index": 8
+    }
+  ],
+  "ownedBy": {
+    "type": "personal",
+    "projectId": "O0FJglQJ7ptmEUnF",
+    "projectName": "Jack Lubbock <jack.lubbock@n8n.io>",
+    "personalEmail": "jack.lubbock@n8n.io"
+  },
+  "createdAt": "2026-05-20T06:37:49.136Z",
+  "updatedAt": "2026-05-20T06:37:49.136Z"
+}

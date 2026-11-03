@@ -1,0 +1,15 @@
+{
+  "id": "WEi5xeqPn9qUGPdU",
+  "name": "Gmail account",
+  "type": "gmailOAuth2",
+  "data": {},
+  "ownedBy": {
+    "type": "personal",
+    "projectId": "O0FJglQJ7ptmEUnF",
+    "projectName": "Jack Lubbock <jack.lubbock@n8n.io>",
+    "personalEmail": "jack.lubbock@n8n.io"
+  },
+  "isGlobal": false,
+  "isResolvable": false,
+  "resolvableAllowFallback": false
+}
